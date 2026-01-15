@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/UlisesNiSchreiner/create-app-cli/compare/v1.1.0...v1.2.0) (2026-01-15)
+
+### Features
+
+- relase 1.2.0 - 01 ([9bed4f6](https://github.com/UlisesNiSchreiner/create-app-cli/commit/9bed4f68f1e5f65e85c21719579b57ba24bd76a4))
+
 ## 1.1.0 (2026-01-15)
 
 ### Features
