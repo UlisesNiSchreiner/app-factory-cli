@@ -10,7 +10,7 @@ program
   .description(
     "Scaffold an app from a GitHub template, initialize it, create a GitHub repo and push the first commit.",
   )
-  .version("0.1.0");
+  .version("1.4.1");
 
 program.addCommand(createCommand);
 
