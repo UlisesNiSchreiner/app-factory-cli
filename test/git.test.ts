@@ -22,20 +22,20 @@ describe("git helpers", () => {
     delete process.env.GITHUB_TOKEN;
   });
 
-  it("test initGitAndCommit when executed then initializes repo commits and sets main", async () => {
+  it("test initGitAndCommit when executed then initializes repo commits and sets master", async () => {
     await initGitAndCommit("/tmp/repo", "msg");
 
     expect(gitInstance.init).toHaveBeenCalled();
     expect(gitInstance.add).toHaveBeenCalledWith(".");
     expect(gitInstance.commit).toHaveBeenCalledWith("msg");
-    expect(gitInstance.branch).toHaveBeenCalledWith(["-M", "main"]);
+    expect(gitInstance.branch).toHaveBeenCalledWith(["-M", "master"]);
   });
 
-  it("test addRemoteAndPush when executed then sets origin and pushes main", async () => {
+  it("test addRemoteAndPush when executed then sets origin and pushes master", async () => {
     await addRemoteAndPush("/tmp/repo", "https://github.com/o/r.git");
 
     expect(gitInstance.addRemote).toHaveBeenCalledWith("origin", "https://github.com/o/r.git");
-    expect(gitInstance.push).toHaveBeenCalledWith(["-u", "origin", "main"]);
+    expect(gitInstance.push).toHaveBeenCalledWith(["-u", "origin", "master"]);
   });
 
   it("test addRemoteAndPush when GITHUB_TOKEN set then uses tokenized remote and cleans up", async () => {
@@ -47,7 +47,7 @@ describe("git helpers", () => {
       "origin",
       "https://x-access-token:abc123@github.com/o/r.git",
     );
-    expect(gitInstance.push).toHaveBeenCalledWith(["-u", "origin", "main"]);
+    expect(gitInstance.push).toHaveBeenCalledWith(["-u", "origin", "master"]);
     expect(gitInstance.remote).toHaveBeenCalledWith([
       "set-url",
       "origin",

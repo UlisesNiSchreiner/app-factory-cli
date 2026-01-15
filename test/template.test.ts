@@ -20,7 +20,7 @@ describe("downloadTemplate", () => {
   });
 
   it("test downloadTemplate when ref is provided then appends ref to repo", async () => {
-    await downloadTemplate("owner/repo", "/tmp/out2", "main");
-    expect(hoisted.degitMock).toHaveBeenCalledWith("owner/repo#main", expect.any(Object));
+    await downloadTemplate("owner/repo", "/tmp/out2", "master");
+    expect(hoisted.degitMock).toHaveBeenCalledWith("owner/repo#master", expect.any(Object));
   });
 });

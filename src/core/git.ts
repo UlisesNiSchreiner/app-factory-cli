@@ -5,7 +5,7 @@ export async function initGitAndCommit(repoPath: string, message: string) {
   await git.init();
   await git.add(".");
   await git.commit(message);
-  await git.branch(["-M", "main"]);
+  await git.branch(["-M", "master"]);
 }
 
 /**
@@ -33,7 +33,7 @@ export async function addRemoteAndPush(repoPath: string, cloneUrl: string) {
   await git.addRemote("origin", pushUrl);
 
   // 2) Push
-  await git.push(["-u", "origin", "main"]);
+  await git.push(["-u", "origin", "master"]);
 
   // 3) Clean the remote (remove token from URL)
   if (token) {

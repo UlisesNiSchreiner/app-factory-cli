@@ -8,7 +8,7 @@ A Node.js CLI that scaffolds new applications from your GitHub template reposito
 ![npm version](https://img.shields.io/npm/v/app-factory-cli)
 ![npm downloads](https://img.shields.io/npm/dm/app-factory-cli)
 ![license](https://img.shields.io/github/license/UlisesNiSchreiner/create-app-cli)
-[![Coverage](https://codecov.io/gh/UlisesNiSchreiner/create-app-cli/branch/main/graph/badge.svg)](https://codecov.io/gh/UlisesNiSchreiner/create-app-cli)
+[![Coverage](https://codecov.io/gh/UlisesNiSchreiner/create-app-cli/branch/master/graph/badge.svg)](https://codecov.io/gh/UlisesNiSchreiner/create-app-cli)
 
 ---
 
@@ -94,14 +94,11 @@ app-factory create \
 
 ---
 
-## Supported templates (default)
-
-These are pre-configured to match your public repos:
+## Supported templates
 
 - `go-api-rest-template`
 - `node-api-rest-template`
 - `react-ts-web-app-template`
-- `config-manager-js`
 - `react-next-ts-web-app-template`
 - `typescript-lib-template`
 - `template_gn_middleend`
@@ -124,7 +121,7 @@ These are pre-configured to match your public repos:
 3. Runs the template initializer (per template)
 4. Initializes a new git repo locally, commits the generated code
 5. Creates a new GitHub repository via API
-6. Adds `origin`, pushes `main`
+6. Adds `origin`, pushes `master`
 
 ---
 
@@ -154,7 +151,7 @@ This CLI tries to authenticate with GitHub like this:
 
 ## Commands
 
-### `create` (default)
+### `create`
 
 ```bash
 app-factory create [options]
@@ -167,7 +164,7 @@ Options:
 - `--owner <owner>`: GitHub username or org name
 - `--org`: treat `--owner` as an organization (creates under org)
 - `--visibility <public|private>`: repo visibility
-- `--out <path>`: output directory (default: `./<appName>` relative to where you run the command)
+- `--out <path>`: output directory (`./<appName>` relative to where you run the command)
 - `--skip-github`: only scaffold locally, do not create remote repo
 - `--skip-init`: do not run the init-template script
 - `--yes`: skip confirmation prompts
